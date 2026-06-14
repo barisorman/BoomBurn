@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp83br0vbt78f"]
+
+[ext_resource type="Script" uid="uid://bora2jumn2k6q" path="res://MainUi.gd" id="1_x7g4x"]
+[ext_resource type="Texture2D" uid="uid://77sejd4rbkam" path="res://Arts/Environment/Adsız_Resim1.png" id="2_x7g4x"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_x7g4x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_x7g4x")
+
+[node name="Oyna" type="Button" parent="."]
+layout_mode = 0
+offset_left = 751.0
+offset_top = 581.0
+offset_right = 759.0
+offset_bottom = 589.0
+scale = Vector2(42.04887, 26.644083)
+action_mode = 0
+flat = true
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 801.00006
+offset_top = 816.0
+offset_right = 809.00006
+offset_bottom = 824.0
+scale = Vector2(29.58218, 18.926085)
+focus_mode = 0
+action_mode = 0
+flat = true

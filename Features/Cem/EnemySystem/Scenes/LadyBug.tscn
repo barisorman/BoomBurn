@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx2k057qwr31l"]
+
+[ext_resource type="PackedScene" uid="uid://c7qtpugyjmths" path="res://Features/Cem/EnemySystem/Scenes/EnemyBase.tscn" id="1_u8vup"]
+[ext_resource type="Script" uid="uid://d317n1grc87fk" path="res://Features/Cem/EnemySystem/Scripts/EnemyLadybug.gd" id="2_1s32d"]
+[ext_resource type="Texture2D" uid="uid://cl2grc0lmbgyb" path="res://Features/Cem/EnemySystem/Sprites/Orc.png" id="3_4x2co"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qya76"]
+atlas = ExtResource("3_4x2co")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdyil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qya76")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" instance=ExtResource("1_u8vup")]
+scale = Vector2(3.32, 3.32)
+script = ExtResource("2_1s32d")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.922, 0.922)
+sprite_frames = SubResource("SpriteFrames_fdyil")

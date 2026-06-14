@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bex8lml4dk215"]
+
+[ext_resource type="Script" uid="uid://cs8cmimmqr8uo" path="res://Features/Cem/PopupMechanic/Scripts/VirusManager.gd" id="1_6yhag"]
+[ext_resource type="PackedScene" uid="uid://d1kjt0ukrrp08" path="res://Features/Cem/PopupMechanic/Scenes/error_window.tscn" id="2_3hahi"]
+
+[node name="VirüsManager" type="CanvasLayer"]
+script = ExtResource("1_6yhag")
+error_scene = ExtResource("2_3hahi")
+
+[node name="Timer" type="Timer" parent="."]

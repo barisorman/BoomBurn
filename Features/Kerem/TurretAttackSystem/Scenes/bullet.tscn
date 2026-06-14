@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgrbecmwla8y2"]
+
+[ext_resource type="Script" uid="uid://x48l0bgkd8er" path="res://Features/Kerem/TurretAttackSystem/Scripts/bullet.gd" id="1_iajge"]
+
+[sub_resource type="Gradient" id="Gradient_kq3bw"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iajge"]
+gradient = SubResource("Gradient_kq3bw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kq3bw"]
+size = Vector2(83.3336, 10.000032)
+
+[node name="Bullet" type="Area2D"]
+scale = Vector2(1.1999964, 1.1999964)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_iajge")
+speed = 5000.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.9607843, 1, 0, 1)
+scale = Vector2(1.3156235, 0.17114626)
+texture = SubResource("GradientTexture2D_iajge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 3
+position = Vector2(3.9736534e-07, 7.450602e-08)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_kq3bw")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmwqjl2tpw7q"]
+
+[ext_resource type="Script" uid="uid://cs8wv460qcyij" path="res://Features/Cem/XPSystem/Scripts/XPOrb.gd" id="1_a05t8"]
+[ext_resource type="Texture2D" uid="uid://dfygmqj8pgl0r" path="res://Features/Cem/XPSystem/Sprites/pngegg.png" id="2_76owl"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.03573855, 0.03573855)
+texture = ExtResource("2_76owl")
+script = ExtResource("1_a05t8")

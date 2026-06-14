@@ -1,0 +1,434 @@
+[gd_scene load_steps=55 format=3 uid="uid://dr355nn3ayjuv"]
+
+[ext_resource type="PackedScene" uid="uid://dcdfibqu5wevi" path="res://Features/Cem/EnemySystem/Scenes/EnemySpawner.tscn" id="1_c6yl6"]
+[ext_resource type="Script" path="res://Features/Kerem/TurretAttackSystem/Scripts/camera_shake.gd" id="1_q5mj2"]
+[ext_resource type="Script" uid="uid://c2ytii8qi2l0m" path="res://Features/Cem/UIManagement/Scripts/UIManager.gd" id="1_x383w"]
+[ext_resource type="PackedScene" uid="uid://nmdsmvnenhtv" path="res://Features/Cem/CursorMechanic/Scenes/game_over.tscn" id="2_5ytkt"]
+[ext_resource type="PackedScene" uid="uid://dvfvooeq6wvww" path="res://Features/Kerem/UpgradeSystem/upgrade_menu.tscn" id="2_r71ex"]
+[ext_resource type="Script" uid="uid://vrntxb7n0wpx" path="res://Main/Scripts/EnemySpawnConfig.gd" id="2_v8jtf"]
+[ext_resource type="PackedScene" uid="uid://bex8lml4dk215" path="res://Features/Cem/PopupMechanic/Scenes/virüs_manager.tscn" id="3_6153i"]
+[ext_resource type="Texture2D" uid="uid://pnwr3vbhwwxu" path="res://Arts/Other/Kalp_gamejam.png" id="3_cxejg"]
+[ext_resource type="PackedScene" uid="uid://bobcb7bjqqvwg" path="res://Main/Scenes/Enemies/Speedy.tscn" id="3_x383w"]
+[ext_resource type="PackedScene" uid="uid://467c403l3uyp" path="res://Main/Scenes/Enemies/Ladybug.tscn" id="4_akwso"]
+[ext_resource type="PackedScene" uid="uid://bmdiuoufroh4v" path="res://Features/Cem/CursorMechanic/Scenes/cursor_layer.tscn" id="4_dehi3"]
+[ext_resource type="Texture2D" uid="uid://bpmaniapnxsvq" path="res://Arts/Other/Maviparlaklık_gamejam.png" id="4_um7iv"]
+[ext_resource type="Texture2D" uid="uid://bcj73nfv73rcy" path="res://Arts/Other/3.png" id="5_3ca6q"]
+[ext_resource type="PackedScene" uid="uid://c4sve0c57w118" path="res://Main/Scenes/Enemies/Bomber.tscn" id="5_xxfcp"]
+[ext_resource type="Shader" uid="uid://rs8nv2seid84" path="res://Features/Kerem/TurretAttackSystem/Shaders/CRT_shader.gdshader" id="6_cxejg"]
+[ext_resource type="Texture2D" uid="uid://bgkhdp64yt8px" path="res://Arts/Other/2.png" id="6_os5l6"]
+[ext_resource type="PackedScene" uid="uid://b1gf0p1gubyec" path="res://Main/Scenes/Enemies/Spider.tscn" id="6_r71ex"]
+[ext_resource type="Script" uid="uid://dmu5owga0y238" path="res://Features/Kerem/TurretAttackSystem/Scripts/SpawnMarkers.gd" id="7_6153i"]
+[ext_resource type="Script" uid="uid://b3yvvccvsa1kb" path="res://Features/Cem/score.gd" id="7_os5l6"]
+[ext_resource type="PackedScene" uid="uid://dvwnnmx8mrirm" path="res://Features/Kerem/TurretAttackSystem/Scenes/BombAttack.tscn" id="8_dehi3"]
+[ext_resource type="PackedScene" uid="uid://gee4bumukpro" path="res://Features/Kerem/TurretAttackSystem/Scenes/BulletAttack.tscn" id="9_1bol5"]
+[ext_resource type="Script" uid="uid://n2dej5wnnceo" path="res://Features/Kerem/TurretAttackSystem/Scripts/TurretSystem.gd" id="13_q5mj2"]
+[ext_resource type="PackedScene" uid="uid://dhgahfsee6g5s" path="res://Features/Cem/WallSystem/Scenes/MainWall.tscn" id="13_x383w"]
+[ext_resource type="Script" uid="uid://vvsm8q118c5m" path="res://Features/Cem/WallSystem/Scripts/WallHandler.gd" id="14_akwso"]
+[ext_resource type="PackedScene" uid="uid://dgrbecmwla8y2" path="res://Features/Kerem/TurretAttackSystem/Scenes/bullet.tscn" id="14_cxejg"]
+[ext_resource type="Script" uid="uid://cnipes0o1l768" path="res://Features/Cem/Turret/Scripts/TurretHandler.gd" id="15_akwso"]
+[ext_resource type="Texture2D" uid="uid://bg0rqdcsgb5rj" path="res://Arts/Environment/Zemin_gamejam.png" id="16_um7iv"]
+[ext_resource type="PackedScene" path="res://Features/Kerem/TurretAttackSystem/Scenes/down_wall.tscn" id="17_gipk5"]
+[ext_resource type="PackedScene" path="res://Features/Kerem/TurretAttackSystem/Scenes/up_wall.tscn" id="18_3ca6q"]
+[ext_resource type="PackedScene" path="res://Features/Kerem/TurretAttackSystem/Scenes/RocketTurret.tscn" id="21_os5l6"]
+[ext_resource type="AudioStream" uid="uid://dhomq08pi4aw2" path="res://Features/Cem/Sounds/minigun-shot1.wav" id="22_5kolu"]
+[ext_resource type="Script" uid="uid://bs1ttjr16b46p" path="res://Features/Kerem/TurretAttackSystem/Scripts/rocket_turret.gd" id="22_5ytkt"]
+[ext_resource type="PackedScene" uid="uid://cdyr6dulkrpwc" path="res://Features/Kerem/TurretAttackSystem/Scenes/rocket.tscn" id="23_gh4tm"]
+[ext_resource type="AudioStream" uid="uid://d0p4a4l3rdvym" path="res://Features/Cem/Sounds/explosion1.wav" id="23_xtua8"]
+[ext_resource type="AudioStream" uid="uid://k3twda5ox3ga" path="res://Features/Cem/Sounds/rocket-falling-cartoon.wav" id="24_haxah"]
+[ext_resource type="AudioStream" uid="uid://trdcafwnx4ta" path="res://Features/Cem/Sounds/error-win-xp.mp3" id="25_xtua8"]
+[ext_resource type="PackedScene" uid="uid://dp2cdku03u0fr" path="res://Features/Kerem/TurretAttackSystem/Scenes/Explosion.tscn" id="30_gh4tm"]
+[ext_resource type="Texture2D" uid="uid://dq7m8wj41l2mq" path="res://Features/Kerem/TurretAttackSystem/Sprites/Silah_sandwich_taban.png" id="32_rs0k7"]
+[ext_resource type="Texture2D" uid="uid://b22cqr7i6jh71" path="res://Features/Kerem/TurretAttackSystem/Sprites/Silah_sandwich_boru.png" id="33_d3jc0"]
+[ext_resource type="AudioStream" uid="uid://dqq2hb7vsav85" path="res://Features/Cem/CursorMechanic/Scenes/soundtrack-tds.mp3" id="36_d3jc0"]
+
+[sub_resource type="GDScript" id="GDScript_yehg7"]
+script/source = "extends Node2D
+
+@onready var xp_orb_scene = preload(\"res://Features/Cem/XPSystem/Scenes/xp_orb.tscn\")
+@onready var game_over_screen = $GameOver
+@onready var score = $GameUI/Score
+func _ready():
+	# Event Bus'ı dinlemeye başla
+	EventBus.request_xp_spawn.connect(_on_xp_spawn_requested)
+	EventBus.player_died.connect(_on_player_died)
+	
+	
+func _on_player_died():
+	# Game Over ekranını çağır ve skoru gönder
+	game_over_screen.show_game_over(score.text)
+
+func _on_xp_spawn_requested(pos: Vector2, amount: int):
+
+	# XP Topunu oluştur
+	for i in amount:
+		var xp_instance = xp_orb_scene.instantiate()
+		xp_instance.global_position = pos
+		call_deferred(\"add_child\", xp_instance)
+	# Pozisyonu ayarla
+	
+	
+	# XP miktarını ayarla (XPOrb scriptinde bu değişken olmalı)
+	#xp_instance.xp_amount = amount 
+	
+	# Sahneye ekle (Main node'un altına ekler)
+	# call_deferred, fizik motoru çalışırken çakışma olmasın diye güvenlidir
+	
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0j5j"]
+bg_color = Color(0, 0, 0, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyq72"]
+bg_color = Color(0.11296391, 0.5649635, 3.85046e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl1q4"]
+bg_color = Color(0, 0, 0, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bh1vw"]
+bg_color = Color(0.45490196, 0.7372549, 0.78431374, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q5mj2"]
+resource_local_to_scene = true
+shader = ExtResource("6_cxejg")
+shader_parameter/edge_pinning = false
+shader_parameter/edge_pin_power = 2.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 4.18
+shader_parameter/roll_size = 2.86
+shader_parameter/roll_variation = 3.064
+shader_parameter/distort_intensity = 0.005
+shader_parameter/breathing_strength = 0.02
+shader_parameter/breathing_softness = 1.0
+shader_parameter/breathing_bias = 0.0
+shader_parameter/vhs_crease_smear = 0.2
+shader_parameter/vhs_crease_intensity = 0.2
+shader_parameter/vhs_crease_jitter = 12.15
+shader_parameter/vhs_crease_speed = 0.5
+shader_parameter/vhs_crease_discolor_amt = 2.35
+shader_parameter/vhs_bottom_thickness = 0.025
+shader_parameter/vhs_bottom_jitter_px = 6.0
+shader_parameter/vhs_mtap_strength = 0.56
+shader_parameter/vhs_chroma_twist = 0.0
+shader_parameter/vhs_tap_spread_px = 1.0
+shader_parameter/vhs_samples = 3
+shader_parameter/sparkle_intensity = 0.0
+shader_parameter/optics_compensation_r = 0.0
+shader_parameter/optics_compensation_g = 0.0
+shader_parameter/optics_compensation_b = 0.0
+shader_parameter/aberration = 0.0
+shader_parameter/discolor = false
+shader_parameter/saturation = 0.5
+shader_parameter/contrast = 1.2
+shader_parameter/static_noise_intensity = 0.05
+shader_parameter/curve = 0.065
+shader_parameter/aspect = 0.478
+shader_parameter/sharpness = 0.812
+shader_parameter/color_offset = 0.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/wobble_strength = 0.2
+shader_parameter/virtual_scanlines = 324.0
+shader_parameter/mask_type = 3
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+shader_parameter/dead_cells_on = false
+shader_parameter/dead_seed = 1.0
+shader_parameter/dead_cell_px = 30.0
+shader_parameter/dead_radius_px = 1.0
+shader_parameter/dead_strength = 1.0
+shader_parameter/hot_cells_on = false
+shader_parameter/hot_seed = 1.0
+shader_parameter/hot_cell_px = 50.0
+shader_parameter/hot_radius_px = 1.0
+shader_parameter/hot_intensity = 0.615
+shader_parameter/hot_flicker = 0.8
+
+[sub_resource type="Resource" id="Resource_5veik"]
+script = ExtResource("2_v8jtf")
+enemy_scene = ExtResource("3_x383w")
+spawn_weight = 100.0
+metadata/_custom_type_script = "uid://vrntxb7n0wpx"
+
+[sub_resource type="Resource" id="Resource_5wali"]
+script = ExtResource("2_v8jtf")
+enemy_scene = ExtResource("4_akwso")
+spawn_weight = 60.0
+weight_increase_per_level = 3.0
+min_level = 2
+metadata/_custom_type_script = "uid://vrntxb7n0wpx"
+
+[sub_resource type="Resource" id="Resource_pt0eq"]
+script = ExtResource("2_v8jtf")
+enemy_scene = ExtResource("5_xxfcp")
+spawn_weight = 30.0
+weight_increase_per_level = 5.0
+min_level = 2
+metadata/_custom_type_script = "uid://vrntxb7n0wpx"
+
+[sub_resource type="Resource" id="Resource_vd0en"]
+script = ExtResource("2_v8jtf")
+enemy_scene = ExtResource("6_r71ex")
+spawn_weight = 15.0
+weight_increase_per_level = 5.0
+min_level = 4
+metadata/_custom_type_script = "uid://vrntxb7n0wpx"
+
+[sub_resource type="Curve" id="Curve_vd0en"]
+_limits = [0.0, 20.0, 0.0, 1.0]
+_data = [Vector2(0, 4.7908916), 0.0, -10.327086, 0, 0, Vector2(0.107882164, 2.184969), -11.032832, -11.032832, 0, 0, Vector2(1, 0.052850723), -2.1177874, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5veik"]
+size = Vector2(1228, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd0en"]
+size = Vector2(1169, 41)
+
+[sub_resource type="Environment" id="Environment_1dnac"]
+background_mode = 3
+tonemap_mode = 2
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.36
+glow_strength = 1.47
+glow_bloom = 0.09
+glow_blend_mode = 0
+adjustment_enabled = true
+adjustment_contrast = 1.36
+
+[node name="CemGame" type="Node2D"]
+
+[node name="MainGame" type="Node2D" parent="."]
+script = SubResource("GDScript_yehg7")
+
+[node name="Camera2D" type="Camera2D" parent="MainGame"]
+position = Vector2(960, 544)
+scale = Vector2(1, 1.0146942)
+position_smoothing_enabled = true
+script = ExtResource("1_q5mj2")
+shake_power = 50.0
+shake_rotate = 3.0
+shake_speed = 30.0
+decay = 1.0
+
+[node name="GameOver" parent="MainGame" instance=ExtResource("2_5ytkt")]
+visible = false
+
+[node name="GameUI" type="CanvasLayer" parent="MainGame"]
+script = ExtResource("1_x383w")
+
+[node name="Health" type="Sprite2D" parent="MainGame/GameUI"]
+position = Vector2(490, 64.640884)
+scale = Vector2(0.79727757, 0.79727757)
+texture = ExtResource("3_cxejg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainGame/GameUI"]
+offset_top = 13.640884
+offset_right = 440.0
+offset_bottom = 78.640884
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthBar" type="ProgressBar" parent="MainGame/GameUI/MarginContainer"]
+custom_minimum_size = Vector2(400, 45)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h0j5j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyq72")
+value = 49.16
+show_percentage = false
+
+[node name="XP" type="Sprite2D" parent="MainGame/GameUI"]
+position = Vector2(1435, 76.640884)
+scale = Vector2(2.2443888, 2.2443888)
+texture = ExtResource("4_um7iv")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MainGame/GameUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -440.0
+offset_top = 13.640884
+offset_bottom = 78.640884
+grow_horizontal = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+metadata/_edit_use_anchors_ = true
+
+[node name="XPBar" type="ProgressBar" parent="MainGame/GameUI/MarginContainer2"]
+custom_minimum_size = Vector2(400, 45)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_nl1q4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bh1vw")
+value = 29.45
+fill_mode = 1
+show_percentage = false
+
+[node name="BulletCount" type="Label" parent="MainGame/GameUI"]
+offset_left = 264.60544
+offset_top = 96.640884
+offset_right = 304.60544
+offset_bottom = 153.64088
+theme_override_font_sizes/font_size = 41
+text = "0"
+horizontal_alignment = 1
+
+[node name="BombCount" type="Label" parent="MainGame/GameUI"]
+offset_left = 395.0
+offset_top = 96.640884
+offset_right = 435.0
+offset_bottom = 153.64088
+theme_override_font_sizes/font_size = 41
+text = "0"
+horizontal_alignment = 1
+
+[node name="Bullet" type="Sprite2D" parent="MainGame/GameUI"]
+position = Vector2(239.60544, 122.640884)
+scale = Vector2(0.15537688, 0.08566796)
+texture = ExtResource("5_3ca6q")
+
+[node name="Bomb" type="Sprite2D" parent="MainGame/GameUI"]
+position = Vector2(367.60544, 121.64088)
+scale = Vector2(0.20869908, 0.13627198)
+texture = ExtResource("6_os5l6")
+
+[node name="Score" type="Label" parent="MainGame/GameUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_top = -22.0
+offset_right = 41.5
+offset_bottom = 178.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 120
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("7_os5l6")
+
+[node name="VirüsManager" parent="MainGame" instance=ExtResource("3_6153i")]
+
+[node name="CursorLayer" parent="MainGame" instance=ExtResource("4_dehi3")]
+
+[node name="UpgradeMenu" parent="MainGame" instance=ExtResource("2_r71ex")]
+
+[node name="CRT_Layer" type="CanvasLayer" parent="MainGame"]
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="MainGame/CRT_Layer"]
+copy_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MainGame/CRT_Layer"]
+material = SubResource("ShaderMaterial_q5mj2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="EnemySpawner" parent="MainGame" instance=ExtResource("1_c6yl6")]
+position = Vector2(1946, -3)
+enemy_configs = Array[ExtResource("2_v8jtf")]([SubResource("Resource_5veik"), SubResource("Resource_5wali"), SubResource("Resource_pt0eq"), SubResource("Resource_vd0en")])
+spawn_rate_curve = SubResource("Curve_vd0en")
+
+[node name="SpawnDamagedWeapons" type="Node2D" parent="MainGame" node_paths=PackedStringArray("turret", "rocketTurret")]
+script = ExtResource("7_6153i")
+bombScene = ExtResource("8_dehi3")
+bulletScene = ExtResource("9_1bol5")
+turret = NodePath("../BulletTurret/Gun")
+bombReloadDelay = 1.0
+rocketTurret = NodePath("../RocketTurret")
+
+[node name="Minigun" type="AudioStreamPlayer" parent="MainGame/SpawnDamagedWeapons"]
+stream = ExtResource("22_5kolu")
+volume_db = -10.0
+
+[node name="Bomb" type="AudioStreamPlayer" parent="MainGame/SpawnDamagedWeapons"]
+stream = ExtResource("23_xtua8")
+
+[node name="BombFall" type="AudioStreamPlayer" parent="MainGame/SpawnDamagedWeapons"]
+stream = ExtResource("24_haxah")
+volume_db = -10.0
+
+[node name="error" type="AudioStreamPlayer" parent="MainGame/SpawnDamagedWeapons"]
+stream = ExtResource("25_xtua8")
+volume_db = -10.0
+
+[node name="ZeminGamejam" type="Sprite2D" parent="MainGame"]
+position = Vector2(971, 593)
+scale = Vector2(1.150926, 1.1509259)
+texture = ExtResource("16_um7iv")
+
+[node name="DownWall" parent="MainGame" instance=ExtResource("17_gipk5")]
+position = Vector2(-243, 1013)
+
+[node name="UpWall" parent="MainGame" instance=ExtResource("18_3ca6q")]
+position = Vector2(-147.00002, -9.000008)
+scale = Vector2(0.44018576, 0.44018576)
+
+[node name="UpWall2" parent="MainGame" instance=ExtResource("18_3ca6q")]
+position = Vector2(-141.00002, 1053.0001)
+scale = Vector2(0.44018576, 0.44018576)
+
+[node name="MainWall" parent="MainGame" node_paths=PackedStringArray("ui_reference") instance=ExtResource("13_x383w")]
+position = Vector2(74.00001, 746.00006)
+script = ExtResource("14_akwso")
+ui_reference = NodePath("../GameUI")
+
+[node name="wall1" type="StaticBody2D" parent="MainGame"]
+visible = false
+position = Vector2(34, 8)
+scale = Vector2(1.7576746, 1.7576746)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGame/wall1"]
+position = Vector2(626, 602)
+shape = SubResource("RectangleShape2D_5veik")
+
+[node name="wall2" type="StaticBody2D" parent="MainGame"]
+visible = false
+scale = Vector2(1.7576746, 1.7576746)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGame/wall2"]
+position = Vector2(646.5, 22.5)
+shape = SubResource("RectangleShape2D_vd0en")
+
+[node name="RocketTurret" parent="MainGame" instance=ExtResource("21_os5l6")]
+position = Vector2(96, 323.00003)
+scale = Vector2(0.59999967, 0.5957297)
+script = ExtResource("22_5ytkt")
+projectile_scene = ExtResource("23_gh4tm")
+explosion_scene = ExtResource("30_gh4tm")
+
+[node name="BulletTurret" type="Node2D" parent="MainGame" node_paths=PackedStringArray("ui_reference")]
+position = Vector2(133, 661)
+scale = Vector2(0.24000186, 0.24000186)
+script = ExtResource("15_akwso")
+ui_reference = NodePath("../GameUI")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainGame/BulletTurret"]
+z_index = 3
+texture = ExtResource("32_rs0k7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MainGame/BulletTurret"]
+z_index = 4
+texture = ExtResource("33_d3jc0")
+
+[node name="Gun" type="Node2D" parent="MainGame/BulletTurret"]
+position = Vector2(69, 0)
+script = ExtResource("13_q5mj2")
+bulletScene = ExtResource("14_cxejg")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MainGame"]
+environment = SubResource("Environment_1dnac")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainGame"]
+stream = ExtResource("36_d3jc0")
+volume_db = -20.0
+autoplay = true

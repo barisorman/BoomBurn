@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://h6jcrjid2cwk"]
+
+[ext_resource type="Texture2D" uid="uid://bbrsumtda5a1e" path="res://Arts/Environment/Duvar_alt_gamejam.png" id="1_j6bue"]
+
+[node name="DownWall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(247, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(493, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(739, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(985, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1231, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1477, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(1723, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(1969, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(2215, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(2461, 0)
+texture = ExtResource("1_j6bue")
+offset = Vector2(123, 20)

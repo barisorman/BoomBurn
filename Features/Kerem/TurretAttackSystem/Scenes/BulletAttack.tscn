@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gee4bumukpro"]
+
+[ext_resource type="Script" uid="uid://dlel0qlmca28j" path="res://Features/Kerem/TurretAttackSystem/Scripts/BulletAttack.gd" id="1_xsss1"]
+[ext_resource type="Texture2D" uid="uid://c0mh2y1qxotis" path="res://Arts/Turret/Çarpı_gamejam.png" id="2_xsss1"]
+
+[node name="BulletAttack" type="Node2D"]
+script = ExtResource("1_xsss1")
+bulletDelay = 1.0
+
+[node name="Mark" type="Sprite2D" parent="."]
+modulate = Color(0.38431373, 1, 0, 0.53333336)
+z_index = 3
+scale = Vector2(0.41900045, 0.41900045)
+texture = ExtResource("2_xsss1")

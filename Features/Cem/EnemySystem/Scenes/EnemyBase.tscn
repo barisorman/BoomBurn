@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7qtpugyjmths"]
+
+[ext_resource type="Script" uid="uid://385pyc28tc11" path="res://Features/Cem/EnemySystem/Scripts/EnemyBase.gd" id="1_eskfb"]
+[ext_resource type="Texture2D" uid="uid://bbbp4ylbmfc7v" path="res://icon.svg" id="1_mc1iy"]
+[ext_resource type="Shader" uid="uid://cjapn1mk86d3q" path="res://Features/Kerem/TurretAttackSystem/Shaders/EnemyBase.gdshader" id="2_le7ap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik37i"]
+radius = 7.222929
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_20hel"]
+shader = ExtResource("2_le7ap")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5augn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mc1iy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eskfb"]
+radius = 19.61353
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "visual_node")]
+scale = Vector2(8.96, 8.96)
+collision_mask = 2
+script = ExtResource("1_eskfb")
+sprite = NodePath("AnimatedSprite2D")
+movement_speed = 0.0
+max_health = 0
+damage_to_wall = 0
+visual_node = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+scale = Vector2(0.99, 0.99)
+shape = SubResource("CircleShape2D_ik37i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_20hel")
+scale = Vector2(0.087, 0.087)
+sprite_frames = SubResource("SpriteFrames_5augn")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+visible = false
+shape = SubResource("CircleShape2D_eskfb")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-7, 0)
+collision_mask = 2

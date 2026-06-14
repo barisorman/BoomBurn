@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://hibf808nm7gm"]
+
+[ext_resource type="PackedScene" uid="uid://dcdfibqu5wevi" path="res://Features/Cem/EnemySystem/Scenes/EnemySpawner.tscn" id="1_66ul1"]
+
+[node name="EnemyTest" type="Node2D"]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("1_66ul1")]
+position = Vector2(1266, 0)
+base_spawn_rate = 5.0

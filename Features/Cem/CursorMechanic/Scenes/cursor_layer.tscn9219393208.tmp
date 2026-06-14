@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmdiuoufroh4v"]
+
+[ext_resource type="Texture2D" uid="uid://cv3l6368eyipg" path="res://Features/Cem/CursorMechanic/Sprites/İmleç_gamejam.png" id="1_ngu1t"]
+[ext_resource type="Script" uid="uid://s360smctvefv" path="res://Features/Cem/CursorMechanic/Scripts/GameCursor.gd" id="2_vir8e"]
+
+[node name="CursorLayer" type="CanvasLayer"]
+layer = 128
+
+[node name="CursorSprite" type="Sprite2D" parent="."]
+visible = false
+rotation = -0.41977713
+scale = Vector2(0.4457712, 0.4457712)
+texture = ExtResource("1_ngu1t")
+centered = false
+offset = Vector2(-39.09, -1.845)
+script = ExtResource("2_vir8e")

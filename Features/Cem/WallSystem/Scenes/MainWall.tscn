@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhgahfsee6g5s"]
+
+[ext_resource type="Texture2D" uid="uid://duipd4m8n0nlw" path="res://Arts/Environment/Duvar_gamejam.png" id="1_0foil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahusp"]
+size = Vector2(201.97142, 765.78455)
+
+[node name="MainWall" type="StaticBody2D" groups=["Wall"]]
+scale = Vector2(1.7576746, 1.7576746)
+collision_layer = 2
+collision_mask = 0
+
+[node name="DuvarGamejam" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0.32898307, -2.1800842)
+scale = Vector2(0.62991434, 0.62991434)
+texture = ExtResource("1_0foil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.23997164, 0.6645508)
+shape = SubResource("RectangleShape2D_ahusp")

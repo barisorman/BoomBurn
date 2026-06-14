@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkbwf2y213hmk"]
+
+[ext_resource type="Texture2D" uid="uid://csuqo4r45sqb5" path="res://Arts/Turret/Havantopu_gamejam_alt.png" id="1_5w71o"]
+[ext_resource type="Texture2D" uid="uid://dj5sudtlfe72i" path="res://Arts/Turret/Havantopu_gamejam_orta.png" id="2_po4id"]
+[ext_resource type="Texture2D" uid="uid://cm6yu5rb5x1ts" path="res://Arts/Turret/Havantopu_gamejam_ust.png" id="3_7ami4"]
+
+[node name="RocketTurret" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-33, 28.000004)
+rotation = -0.1937482
+texture = ExtResource("1_5w71o")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-11.999998, 43)
+rotation = -0.57617503
+scale = Vector2(1.0672822, 1.0672822)
+texture = ExtResource("2_po4id")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 1
+rotation = -0.18071702
+scale = Vector2(1.0432451, 1.0432451)
+texture = ExtResource("3_7ami4")

@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://467c403l3uyp"]
+
+[ext_resource type="PackedScene" uid="uid://c7qtpugyjmths" path="res://Features/Cem/EnemySystem/Scenes/EnemyBase.tscn" id="1_ofbhs"]
+[ext_resource type="Script" uid="uid://c5qi2fq2rbkfj" path="res://Features/Cem/EnemySystem/Scripts/LadybugHandler.gd" id="2_ofbhs"]
+[ext_resource type="Texture2D" uid="uid://c2s6vf8ejwlcy" path="res://Arts/Enemies/Ladybug_gamejam.png" id="3_ofbhs"]
+[ext_resource type="Shader" uid="uid://cjapn1mk86d3q" path="res://Features/Kerem/TurretAttackSystem/Shaders/EnemyBase.gdshader" id="3_uto07"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofbhs"]
+radius = 5.2495623
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kse30"]
+resource_local_to_scene = true
+shader = ExtResource("3_uto07")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdyil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ofbhs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evrq8"]
+radius = 9.32561
+
+[node name="Ladybug" instance=ExtResource("1_ofbhs")]
+scale = Vector2(7.75557, 7.75557)
+script = ExtResource("2_ofbhs")
+movement_speed = 100.0
+max_health = 5
+damage_to_wall = 5
+xp_reward = 20
+
+[node name="CollisionShape2D" parent="." index="0"]
+scale = Vector2(0.99310976, 1.3032529)
+shape = SubResource("CircleShape2D_ofbhs")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_kse30")
+scale = Vector2(0.041858986, 0.041858986)
+sprite_frames = SubResource("SpriteFrames_fdyil")
+
+[node name="HurtBox" parent="." index="2"]
+scale = Vector2(1, 1.313253)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+visible = true
+shape = SubResource("CircleShape2D_evrq8")

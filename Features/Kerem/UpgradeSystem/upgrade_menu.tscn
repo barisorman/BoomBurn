@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvfvooeq6wvww"]
+
+[ext_resource type="Script" uid="uid://dr103ai3liu46" path="res://Features/Kerem/UpgradeSystem/Scripts/upgrade_menu.gd" id="1_xtup4"]
+[ext_resource type="Texture2D" uid="uid://caltjtmog8n18" path="res://Features/Kerem/TurretAttackSystem/Sprites/Can_kartı_gamejam.png" id="2_6cuiu"]
+[ext_resource type="Texture2D" uid="uid://uh8gdfoif8w5" path="res://Features/Kerem/TurretAttackSystem/Sprites/Taran_kart.png" id="3_7c4vx"]
+[ext_resource type="Texture2D" uid="uid://cddtlcg7km18s" path="res://Features/Kerem/TurretAttackSystem/Sprites/Havantopu_kartı.png" id="4_w0t66"]
+
+[node name="UpgradeMenu" type="CanvasLayer" node_paths=PackedStringArray("btn_wall", "btn_turret", "btn_rocket")]
+process_mode = 3
+script = ExtResource("1_xtup4")
+btn_wall = NodePath("Background/Container/WallCard")
+btn_turret = NodePath("Background/Container/TurretCard")
+btn_rocket = NodePath("Background/Container/RocketCard")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0064528)
+color = Color(0, 0, 0, 0.13725491)
+
+[node name="Container" type="HBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -256.0
+offset_right = 547.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 94
+
+[node name="WallCard" type="TextureButton" parent="Background/Container"]
+layout_mode = 2
+texture_normal = ExtResource("2_6cuiu")
+
+[node name="Label" type="Label" parent="Background/Container/WallCard"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 307.53833
+offset_right = 334.0
+offset_bottom = 440.6792
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="TurretCard" type="TextureButton" parent="Background/Container"]
+layout_mode = 2
+texture_normal = ExtResource("3_7c4vx")
+
+[node name="Label" type="Label" parent="Background/Container/TurretCard"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 301.57684
+offset_right = 321.0
+offset_bottom = 456.57666
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="RocketCard" type="TextureButton" parent="Background/Container"]
+layout_mode = 2
+texture_normal = ExtResource("4_w0t66")
+
+[node name="Label" type="Label" parent="Background/Container/RocketCard"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 312.5063
+offset_right = 327.0
+offset_bottom = 454.58948
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1

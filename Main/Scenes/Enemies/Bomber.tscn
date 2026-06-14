@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4sve0c57w118"]
+
+[ext_resource type="PackedScene" uid="uid://c7qtpugyjmths" path="res://Features/Cem/EnemySystem/Scenes/EnemyBase.tscn" id="1_51jd1"]
+[ext_resource type="Script" uid="uid://ciri2f45vhg6p" path="res://Features/Cem/EnemySystem/Scripts/BomberHandler.gd" id="2_w0vnh"]
+[ext_resource type="Shader" uid="uid://cjapn1mk86d3q" path="res://Features/Kerem/TurretAttackSystem/Shaders/EnemyBase.gdshader" id="3_0mwny"]
+[ext_resource type="Texture2D" uid="uid://dx5mcqunox132" path="res://Arts/Enemies/Bomb_gamejam.png" id="3_w0vnh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w0vnh"]
+radius = 6.5697036
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m0fli"]
+resource_local_to_scene = true
+shader = ExtResource("3_0mwny")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mwny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w0vnh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fuotx"]
+radius = 8.386332
+
+[node name="Bomber" instance=ExtResource("1_51jd1")]
+z_index = 1
+scale = Vector2(12.379329, 12.379329)
+script = ExtResource("2_w0vnh")
+movement_speed = 60.0
+max_health = 9
+damage_to_wall = 25
+xp_reward = 30
+
+[node name="CollisionShape2D" parent="." index="0"]
+scale = Vector2(-0.9229917, 1.1771567)
+shape = SubResource("CircleShape2D_w0vnh")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_m0fli")
+position = Vector2(0.24233948, -2.5849545)
+scale = Vector2(0.041080754, 0.041080754)
+sprite_frames = SubResource("SpriteFrames_0mwny")
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+visible = true
+shape = SubResource("CircleShape2D_fuotx")

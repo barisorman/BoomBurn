@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1kjt0ukrrp08"]
+
+[ext_resource type="Texture2D" uid="uid://j0nldjvbqos2" path="res://Features/Cem/PopupMechanic/Sprites/unnamed.png" id="1_cv2xx"]
+[ext_resource type="Script" uid="uid://bxr68vbc7mpk5" path="res://Features/Cem/PopupMechanic/Scripts/ErrorWindow.gd" id="2_wpj06"]
+
+[node name="ErrorWindow" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cv2xx")
+script = ExtResource("2_wpj06")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 382.00003
+offset_top = -3.0
+offset_right = 395.55548
+offset_bottom = 10.754802
+scale = Vector2(5.0164304, 5.0164304)
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 192.00002
+offset_right = 156.0
+offset_bottom = 200.00002
+scale = Vector2(18.416431, 5.49643)
+focus_mode = 0
+action_mode = 0
+flat = true

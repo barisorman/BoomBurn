@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjnophgx3r05s"]
+
+[ext_resource type="Script" path="res://Features/Kerem/TurretAttackSystem/Scripts/TurretSystem.gd" id="1_3ghmm"]
+[ext_resource type="PackedScene" uid="uid://dgrbecmwla8y2" path="res://Features/Kerem/TurretAttackSystem/Scenes/bullet.tscn" id="2_6mbb2"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_3ghmm")
+bulletScene = ExtResource("2_6mbb2")

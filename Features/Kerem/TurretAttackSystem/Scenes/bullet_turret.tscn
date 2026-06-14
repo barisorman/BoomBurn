@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1aevipjhw4"]
+
+[ext_resource type="Script" uid="uid://cnipes0o1l768" path="res://Features/Cem/Turret/Scripts/TurretHandler.gd" id="1_rml45"]
+[ext_resource type="Script" uid="uid://n2dej5wnnceo" path="res://Features/Kerem/TurretAttackSystem/Scripts/TurretSystem.gd" id="2_npytf"]
+[ext_resource type="PackedScene" uid="uid://dgrbecmwla8y2" path="res://Features/Kerem/TurretAttackSystem/Scenes/bullet.tscn" id="3_ea8kn"]
+
+[node name="BulletTurret" type="Node2D" node_paths=PackedStringArray("ui_reference")]
+script = ExtResource("1_rml45")
+ui_reference = NodePath("")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Gun" type="Node2D" parent="."]
+position = Vector2(69, 0)
+script = ExtResource("2_npytf")
+bulletScene = ExtResource("3_ea8kn")

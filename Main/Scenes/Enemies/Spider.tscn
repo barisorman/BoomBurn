@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1gf0p1gubyec"]
+
+[ext_resource type="PackedScene" uid="uid://c7qtpugyjmths" path="res://Features/Cem/EnemySystem/Scenes/EnemyBase.tscn" id="1_2jw7o"]
+[ext_resource type="Script" uid="uid://c6jq5yj08gc3o" path="res://Features/Cem/EnemySystem/Scripts/SpiderHandler.gd" id="2_tdse2"]
+[ext_resource type="Shader" uid="uid://cjapn1mk86d3q" path="res://Features/Kerem/TurretAttackSystem/Shaders/EnemyBase.gdshader" id="3_g2wf7"]
+[ext_resource type="Texture2D" uid="uid://xd84ngkqlba3" path="res://Arts/Enemies/Spider_gamejam.png" id="3_tdse2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdse2"]
+radius = 6.785631
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jyome"]
+resource_local_to_scene = true
+shader = ExtResource("3_g2wf7")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdse2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tdse2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhvmy"]
+radius = 8.883633
+
+[node name="Spider" instance=ExtResource("1_2jw7o")]
+scale = Vector2(10.001547, 10.001547)
+script = ExtResource("2_tdse2")
+movement_speed = 150.0
+max_health = 12
+damage_to_wall = 1
+attack_cooldown = 0.2
+xp_reward = 40
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -1.9230771)
+scale = Vector2(0.99, 0.8053845)
+shape = SubResource("CircleShape2D_tdse2")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_jyome")
+position = Vector2(0, -0.7998762)
+scale = Vector2(0.046994306, 0.046994306)
+sprite_frames = SubResource("SpriteFrames_tdse2")
+
+[node name="HurtBox" parent="." index="2"]
+position = Vector2(0, -1.5384617)
+scale = Vector2(1.1503961, 0.8307688)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+visible = true
+shape = SubResource("CircleShape2D_bhvmy")

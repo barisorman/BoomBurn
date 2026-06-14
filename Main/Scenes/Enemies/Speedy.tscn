@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bobcb7bjqqvwg"]
+
+[ext_resource type="PackedScene" uid="uid://c7qtpugyjmths" path="res://Features/Cem/EnemySystem/Scenes/EnemyBase.tscn" id="1_2c8mp"]
+[ext_resource type="Texture2D" uid="uid://tegv8ojbmcv8" path="res://Arts/Enemies/Robot_gamejam.png" id="3_ttypp"]
+[ext_resource type="Script" uid="uid://yt5p3ravqe3h" path="res://Features/Cem/EnemySystem/Scripts/SpeedyHandler.gd" id="3_vop6k"]
+[ext_resource type="Shader" uid="uid://cjapn1mk86d3q" path="res://Features/Kerem/TurretAttackSystem/Shaders/EnemyBase.gdshader" id="3_wyfgq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vop6k"]
+radius = 4.8914523
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jhspe"]
+resource_local_to_scene = true
+shader = ExtResource("3_wyfgq")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vop6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ttypp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_txx8s"]
+radius = 29.48599
+
+[node name="Speedy" instance=ExtResource("1_2c8mp")]
+scale = Vector2(4.608129, 4.608129)
+script = ExtResource("3_vop6k")
+movement_speed = 200.0
+max_health = 2
+damage_to_wall = 5
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 0.38461542)
+scale = Vector2(0.9130773, 1.3592309)
+shape = SubResource("CircleShape2D_vop6k")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_jhspe")
+position = Vector2(-0.6510235, 6.0762186)
+scale = Vector2(0.08765563, 0.086728446)
+sprite_frames = SubResource("SpriteFrames_vop6k")
+
+[node name="HurtBox" parent="." index="2"]
+position = Vector2(0, 0.7692308)
+scale = Vector2(-0.37463728, 0.53001356)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+visible = true
+shape = SubResource("CircleShape2D_txx8s")

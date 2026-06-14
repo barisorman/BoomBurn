@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvgehot8m4bft"]
+
+[ext_resource type="Texture2D" uid="uid://bp4ucojfylsq0" path="res://Arts/Environment/Duvar_üst_gamejam.png" id="1_7ppxx"]
+
+[node name="UpWall" type="Node2D"]
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(443, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(885, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1327, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1769, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(2211, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(2653, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(3095, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(3537, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(3979, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(4421, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(4863, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(5305, 0)
+texture = ExtResource("1_7ppxx")
+offset = Vector2(221, 209)

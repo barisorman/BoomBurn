@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu0ywrp1yrh0w"]
+
+[ext_resource type="Script" uid="uid://c2ytii8qi2l0m" path="res://Features/Cem/UIManagement/Scripts/UIManager.gd" id="1_fyq72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0j5j"]
+bg_color = Color(0, 0, 0, 0.18431373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyq72"]
+bg_color = Color(0.11296391, 0.5649635, 3.85046e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl1q4"]
+bg_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bh1vw"]
+bg_color = Color(0.5228048, 0.0035183579, 0.92937386, 1)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_fyq72")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(400, 45)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h0j5j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyq72")
+value = 49.16
+show_percentage = false
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_direction = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1922.0
+offset_right = -1472.0
+offset_bottom = 65.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+
+[node name="XPBar" type="ProgressBar" parent="MarginContainer2"]
+custom_minimum_size = Vector2(400, 45)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_nl1q4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bh1vw")
+value = 29.45
+show_percentage = false
