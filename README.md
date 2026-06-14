@@ -46,7 +46,7 @@ Built in [48/72] hours by a team of 4 for Sandwich Jam II.
 - **Barış Orman** — game design & programming
 - **Cem Topuz** — programming
 - **Kerem Demir** — game design & programming
-- **Zeynep Beril Tımar — Art
+- **Zeynep Beril Tımar** — Art
 
 ## 🛠️ Built With
 
