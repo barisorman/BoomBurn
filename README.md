@@ -44,9 +44,9 @@ direct control, and surviving means adapting to that chaos.
 Built in [48/72] hours by a team of 4 for Sandwich Jam II.
 
 - **Barış Orman** — game design & programming
-- [Teammate] — [role]
-- [Teammate] — [role]
-- [Teammate] — [role]
+- **Cem Topuz** — programming
+- **Kerem Demir** — game design & programming
+- **Zeynep Beril Tımar — Art
 
 ## 🛠️ Built With
 
